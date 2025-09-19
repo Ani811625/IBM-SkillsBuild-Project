@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Flavory - Discover 50+ authentic Indian recipes, from street food to royal curries. Created by Aniruddha Sarkar." />
+    <meta name="keywords" content="recipes, Indian food, cooking, Flavory, Aniruddha Sarkar, biryani, curry, street food" />
+    <meta name="author" content="Aniruddha Sarkar" />
+    <meta property="og:title" content="Flavory • Discover Amazing Recipes" />
+    <meta property="og:description" content="Discover 50+ authentic Indian recipes, from street food to royal curries." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flavory-recipes.netlify.app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flavory • Discover Amazing Recipes" />
+    <meta name="twitter:description" content="Discover 50+ authentic Indian recipes, from street food to royal curries." />
+    <!-- Netlify Performance Optimizations -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+    <title>Flavory • Discover Amazing Recipes</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

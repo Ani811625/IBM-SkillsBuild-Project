@@ -1,0 +1,46 @@
+[build]
+  # Build command
+  command = "npm run build"
+  
+  # Directory with the static files
+  publish = "dist"
+
+  # Environment variables
+  [build.environment]
+    NODE_VERSION = "20"
+
+# Redirects for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for better performance and security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache service worker
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Preload key resources
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '''
+    </assets/index.css>; rel=preload; as=style,
+    </assets/index.js>; rel=preload; as=script
+    '''

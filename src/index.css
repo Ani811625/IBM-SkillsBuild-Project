@@ -1,0 +1,289 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-600;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900;
+    @apply font-sans antialiased;
+    @apply min-h-screen;
+    @apply text-gray-800 dark:text-gray-100;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/30 dark:border-slate-700/30 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+    @apply relative overflow-hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/80 dark:bg-slate-700/80 text-slate-800 dark:text-slate-100 border-2 border-slate-200 dark:border-slate-600 font-semibold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl;
+    @apply hover:bg-slate-50 dark:hover:bg-slate-600;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg;
+  }
+  
+  .input-field {
+    @apply w-full px-6 py-4 bg-white/80 dark:bg-slate-700/80 border-2 border-slate-200 dark:border-slate-600 rounded-2xl focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all duration-300 placeholder-slate-500 dark:placeholder-slate-400;
+    @apply backdrop-blur-sm;
+  }
+  
+  .recipe-card {
+    @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-white/30 dark:border-slate-700/30 rounded-3xl shadow-lg p-6 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl cursor-pointer;
+    @apply hover:bg-white/90 dark:hover:bg-slate-800/90;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full h-10 w-10 border-4 border-slate-200 border-t-emerald-500;
+  }
+  
+  .hero-gradient {
+    @apply bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600;
+  }
+  
+  .card-hover {
+    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-rose-500 via-pink-500 to-orange-500 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-cool {
+    @apply bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent;
+  }
+  
+  .bg-glass {
+    @apply bg-white/20 dark:bg-slate-800/20 backdrop-blur-xl border border-white/30 dark:border-slate-700/30;
+  }
+  
+  .bg-glass-strong {
+    @apply bg-white/40 dark:bg-slate-800/40 backdrop-blur-2xl border border-white/50 dark:border-slate-700/50;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  
+  .shadow-glow-pink {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+  }
+  
+  .shadow-glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-emerald-400 to-teal-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gradient-to-b from-emerald-500 to-teal-600;
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes cookingPan {
+  0%, 100% { transform: rotate(-3deg) scale(1); }
+  50% { transform: rotate(3deg) scale(1.05); }
+}
+
+@keyframes bounceVegetable {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-15px) rotate(-8deg) scale(1.1); }
+  75% { transform: translateY(-8px) rotate(8deg) scale(0.95); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+.animate-cooking-pan {
+  animation: cookingPan 2s ease-in-out infinite;
+}
+
+.animate-bounce-vegetable {
+  animation: bounceVegetable 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Enhanced dark theme */
+.dark .glass-card {
+  @apply bg-slate-800/60 border-slate-700/40;
+}
+
+.dark .btn-secondary {
+  @apply bg-slate-700/80 border-slate-600 text-slate-100;
+}
+
+.dark .input-field {
+  @apply bg-slate-700/80 border-slate-600 text-slate-100;
+}
+
+.dark .recipe-card {
+  @apply bg-slate-800/80 border-slate-700/40;
+}
+
+/* Recipe card enhancements */
+.recipe-card:hover {
+  @apply shadow-2xl;
+}
+
+.recipe-card .recipe-image {
+  @apply transition-transform duration-500 hover:scale-110;
+}
+
+/* Button enhancements */
+.btn-primary:hover {
+  @apply shadow-glow;
+}
+
+.btn-accent:hover {
+  @apply shadow-glow-pink;
+}
+
+/* Text enhancements */
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-warm {
+  @apply bg-gradient-to-br from-rose-100 via-pink-50 to-orange-50 dark:from-rose-900/20 dark:via-pink-900/20 dark:to-orange-900/20;
+}
+
+.bg-gradient-cool {
+  @apply bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-50 dark:from-blue-900/20 dark:via-indigo-900/20 dark:to-purple-900/20;
+}
+
+.bg-gradient-nature {
+  @apply bg-gradient-to-br from-emerald-100 via-teal-50 to-cyan-50 dark:from-emerald-900/20 dark:via-teal-900/20 dark:to-cyan-900/20;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-4 focus:ring-emerald-500/20 focus:border-emerald-500;
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-slate-200 dark:bg-slate-700 rounded;
+}
+
+/* Interactive elements */
+.interactive {
+  @apply transition-all duration-300 hover:scale-105 active:scale-95;
+}
+
+/* Status indicators */
+.status-online {
+  @apply bg-emerald-500;
+}
+
+.status-offline {
+  @apply bg-slate-400;
+}
+
+.status-busy {
+  @apply bg-rose-500;
+}
