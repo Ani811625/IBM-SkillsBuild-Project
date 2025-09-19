@@ -4,7 +4,7 @@
 
 A modern, intelligent recipe discovery application that helps you find delicious recipes based on available ingredients, dietary preferences, and cooking time. Built with React and enhanced with smart caching, offline support, user personalization, and comprehensive analytics. Features include advanced API optimization, local recipe fallbacks, and privacy-focused user tracking.
 
-**Live Demo:** [https://aesthetic-horse-e40fa6.netlify.app/)
+**Live Demo:** https://aesthetic-horse-e40fa6.netlify.app/
 
 ---
 
