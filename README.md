@@ -4,7 +4,7 @@
 
 A modern, intelligent recipe discovery application that helps you find delicious recipes based on available ingredients, dietary preferences, and cooking time. Built with React and enhanced with smart caching, offline support, user personalization, and comprehensive analytics. Features include advanced API optimization, local recipe fallbacks, and privacy-focused user tracking.
 
-**Live Demo:** [https://flavory-recipes.netlify.app](https://flavory-recipes.netlify.app)
+**Live Demo:** [https://aesthetic-horse-e40fa6.netlify.app/)
 
 ---
 
@@ -218,47 +218,6 @@ recipe-finder/
 - **Cache-First Strategy**: Intelligent data retrieval prioritizing cached content
 - **Usage Analytics**: Detailed API usage statistics and optimization insights
 
-### **📱 Progressive Web App (PWA)**
-- **Service Worker Implementation**: Advanced caching strategies for offline support
-- **Install on Mobile/Desktop**: Native app experience across all devices
-- **Offline Recipe Viewing**: Access cached recipes without internet
-- **Background Sync**: Automatic recipe updates when connection restored
-- **Push Notifications**: Meal reminders and recipe suggestions (coming soon)
-
-### **🎯 Performance Optimization**
-- **Lazy Loading**: Components and images load on demand
-- **Image Optimization**: WebP format support with progressive loading fallbacks
-- **Code Splitting**: Automatic bundle optimization for faster loading
-- **Mobile Touch Gestures**: Optimized swipe, tap, and pull-to-refresh interactions
-- **Memory Management**: Efficient caching with automatic cleanup
-
-### **👤 User Personalization**
-- **Custom Preferences**: Save dietary restrictions, favorite cuisines, and cooking preferences
-- **Personalized Recommendations**: AI-driven recipe suggestions based on user behavior
-- **Custom Recipe Collections**: Organize recipes by categories, occasions, or personal tags
-- **Cooking History Tracking**: Monitor cooking patterns and favorite recipe types
-- **Privacy-First Analytics**: User behavior insights without compromising privacy
-
-### **🔍 Advanced Search & Filtering**
-- **Nutrition-Based Filtering**: Search by calories, protein, carbs, and other nutritional values
-- **Equipment-Based Search**: Find recipes based on available cooking equipment
-- **Difficulty Level Filtering**: Easy, medium, and advanced recipe categorization
-- **Ingredient Substitution**: Smart suggestions for alternative ingredients
-- **Cooking Time Optimization**: Filter by preparation and cooking time ranges
-
-### **⭐ Community Features**
-- **Rating & Review System**: Community-driven recipe ratings with detailed reviews
-- **Social Sharing**: Share favorite recipes across social media platforms
-- **Recipe Scaling Calculator**: Automatically adjust ingredients for different serving sizes
-- **Cooking Tips Integration**: Community-contributed cooking tips and variations
-
-### **♿ Accessibility Features**
-- **Screen Reader Support**: Comprehensive ARIA labels and semantic HTML
-- **Keyboard Navigation**: Full keyboard accessibility with logical tab order
-- **High Contrast Mode**: Enhanced visibility options for better readability
-- **Focus Management**: Clear focus indicators and accessible interaction patterns
-- **Mobile Accessibility**: Touch-friendly interfaces with proper sizing and spacing
-
 ---
 
 ## 🎯 Usage Examples
@@ -267,7 +226,7 @@ recipe-finder/
 
 1. **Quick Start with Popular Ingredients**
    ```
-   Navigate to "Surprise Me" → Click "Rice + Vegetables" → Get instant recipes!
+   Navigate to "Surprise" → Click "Rice + Vegetables" → Get instant recipes!
    ```
 
 2. **Custom Ingredient Search**
@@ -393,7 +352,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: Report bugs or request features via GitHub Issues
 - **Documentation**: Comprehensive guides in the `/docs` folder
 - **Community**: Join our Discord server for discussions
-- **Email**: support@recipe-finder.app
+- **Email**: aniruddhas387@gmail.com
 
 ---
 
